@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".network.fragment.ResultFragment">
+
+    <TextView
+        android:id="@+id/firsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vaaaau"
+        android:textSize="52sp" />
+
+    <TextView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="52sp" />
+
+    <TextView
+        android:id="@+id/secondName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vaaaau"
+        android:textSize="42sp" />
+
+    <TextView
+        android:id="@+id/getPer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Persent"
+        android:textSize="32sp" />
+
+    <!--    <TextView-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:id="@+id/getRes"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Result"-->
+    <!--        android:textSize="32sp"-->
+    <!--        />-->
+
+
+</LinearLayout>

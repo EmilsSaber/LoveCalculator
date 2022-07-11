@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".network.fragment.HomeFragment">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <EditText
+
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:background="@drawable/ic_edittext"
+        android:id="@+id/firstText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="200dp"
+        android:hint="FirstName"
+        android:textColorHint="@color/blue"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@id/secondText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:background="@drawable/ic_edittext"
+        android:id="@+id/secondText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:hint="SecondName"
+        android:textColorHint="@color/purple_200"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/firstText" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="350dp"
+        android:text="ok"
+        android:textSize="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
