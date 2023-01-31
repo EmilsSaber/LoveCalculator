@@ -8,52 +8,47 @@
     android:orientation="vertical"
     tools:context=".network.fragment.HomeFragment">
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!--    <VideoView-->
+    <!--        android:id="@+id/videoView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent" />-->
 
-    <EditText
-
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:background="@drawable/ic_edittext"
-        android:id="@+id/firstText"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="200dp"
-        android:hint="FirstName"
-        android:textColorHint="@color/blue"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toTopOf="@id/secondText"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/bacground"/>
 
-    <EditText
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:background="@drawable/ic_edittext"
-        android:id="@+id/secondText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:hint="SecondName"
-        android:textColorHint="@color/purple_200"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
-        app:layout_constraintTop_toBottomOf="@+id/firstText" />
+    <LinearLayout
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="350dp"
-        android:text="ok"
-        android:textSize="42dp"
+        android:background="@color/black"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/secondText" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background">
 
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/firstText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:textColor="@color/white"
+            android:id="@+id/secondText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

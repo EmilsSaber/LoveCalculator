@@ -1,13 +1,9 @@
 package kg.example.lovecalculator.network.fragment
-
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kg.example.lovecalculator.R
 import kg.example.lovecalculator.databinding.FragmentHomeBinding
@@ -17,7 +13,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeFragment : Fragment() {
+class HomeFragment : androidx.fragment.app.Fragment() {
     lateinit var binding: FragmentHomeBinding
     val bundle2 = Bundle()
 
@@ -25,12 +21,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater)
-        initMediaBackground()
-        binding.videoView.setOnCompletionListener {
-            initMediaBackground()
-        }
         return binding.root
     }
 
@@ -38,13 +29,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initClicker()
     }
-    private fun initMediaBackground() {
-        val ac = requireActivity().packageName
-        val offlineV = Uri.parse("android.resource://${ac}/${R.raw.joja}")
-        binding.videoView.setVideoURI(offlineV)
-        binding.videoView.requestFocus()
-        binding.videoView.start()
-    }
+
     private fun initClicker() {
         with(binding) {
             btn.setOnClickListener {
@@ -59,9 +44,7 @@ class HomeFragment : Fragment() {
                         val per = response.body()?.percentage
                         bundle2.putString("MyArg", per)
                         findNavController().navigate(R.id.resultFragment, bundle2)
-                    }
-
-                    override fun onFailure(call: Call<LoveModel>, t: Throwable) {
+                    }override fun onFailure(call: Call<LoveModel>, t: Throwable) {
                         Log.e("ololo", "onFailure:${t.message}")
                     }
                 })
@@ -69,3 +52,18 @@ class HomeFragment : Fragment() {
         }
     }
 }
+
+
+//        initMediaBackground()
+//        binding.videoView.setOnCompletionListener {
+//            initMediaBackground()
+//        }
+
+
+//    private fun initMediaBackground() {
+//        val ac = requireActivity().packageName
+//        val offlineV = Uri.parse("android.resource://${ac}/${R.raw.joja}")
+//        binding.videoView.setVideoURI(offlineV)
+//        binding.videoView.requestFocus()
+//        binding.videoView.start()
+//    }

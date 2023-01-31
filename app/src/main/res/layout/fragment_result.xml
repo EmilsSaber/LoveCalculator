@@ -7,6 +7,10 @@
     android:orientation="vertical"
     tools:context=".network.fragment.ResultFragment">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/firsName"
         android:layout_width="wrap_content"
