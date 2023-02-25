@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".network.fragment.ResultFragment">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
 
     <TextView
+        android:textColor="@color/red"
         android:id="@+id/firsName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,6 +19,7 @@
         android:textSize="52sp" />
 
     <TextView
+        android:textColor="@color/dark"
         android:id="@+id/plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +27,7 @@
         android:textSize="52sp" />
 
     <TextView
+        android:textColor="@color/purple_700"
         android:id="@+id/secondName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +35,7 @@
         android:textSize="42sp" />
 
     <TextView
+        android:textColor="@color/blue"
         android:id="@+id/getPer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
